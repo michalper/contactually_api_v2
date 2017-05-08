@@ -1,0 +1,36 @@
+{
+  "name": "michalper/contactually_api_v2",
+  "description": "Unofficial Contactually REST API v2 Library",
+  "homepage": "https://github.com/michalper/contactually_api_v2",
+  "license": "GNU",
+  "authors": [
+    {
+      "name": "Michał Per",
+      "email": "michal.per@encja.com",
+      "homepage": "https://github.com/michalper",
+      "role": "Head Integration Developer"
+    }
+  ],
+  "support": {
+    "email": "michal.per@encja.com"
+  },
+  "keywords": [
+    "adb"
+  ],
+  "require": {
+    "itav/serializer": "^1.3",
+    "michalper/tools": "^0.1.0",
+    "guzzlehttp/guzzle": "^6.2"
+  },
+  "require-dev": {
+  },
+  "type": "library",
+  "autoload": {
+    "psr-0": {
+      "ContactuallyClient": "lib/"
+    },
+    "psr-4": {
+      "ContactuallyClient\\": "lib/ContactuallyClient/"
+    }
+  }
+}
