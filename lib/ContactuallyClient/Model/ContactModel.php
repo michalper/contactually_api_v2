@@ -322,6 +322,16 @@ class ContactModel
     }
 
     /**
+     * @param AddressModel $addressModel
+     * @return ContactModel
+     */
+    public function addAddress(AddressModel $addressModel)
+    {
+        $this->addresses[] = $addressModel;
+        return $this;
+    }
+
+    /**
      * @return EmailAddressModel[]
      */
     public function getEmailAddresses()
@@ -336,6 +346,16 @@ class ContactModel
     public function setEmailAddresses($emailAddresses)
     {
         $this->emailAddresses = $emailAddresses;
+        return $this;
+    }
+
+    /**
+     * @param EmailAddressModel $emailAddressModel
+     * @return ContactModel
+     */
+    public function addEmailAddress(EmailAddressModel $emailAddressModel)
+    {
+        $this->emailAddresses[] = $emailAddressModel;
         return $this;
     }
 
@@ -358,6 +378,16 @@ class ContactModel
     }
 
     /**
+     * @param SocialMediaProfileModel $socialMediaProfileModel
+     * @return ContactModel
+     */
+    public function addSocialMediaProfile(SocialMediaProfileModel $socialMediaProfileModel)
+    {
+        $this->socialMediaProfiles[] = $socialMediaProfileModel;
+        return $this;
+    }
+
+    /**
      * @return WebsiteModel[]
      */
     public function getWebsites()
@@ -376,6 +406,16 @@ class ContactModel
     }
 
     /**
+     * @param WebsiteModel $websiteModel
+     * @return ContactModel
+     */
+    public function addWebsite(WebsiteModel $websiteModel)
+    {
+        $this->websites[] = $websiteModel;
+        return $this;
+    }
+
+    /**
      * @return PhoneNumberModel[]
      */
     public function getPhoneNumbers()
@@ -390,6 +430,16 @@ class ContactModel
     public function setPhoneNumbers($phoneNumbers)
     {
         $this->phoneNumbers = $phoneNumbers;
+        return $this;
+    }
+
+    /**
+     * @param PhoneNumberModel $phoneNumberModel
+     * @return ContactModel
+     */
+    public function addPhoneNumber(PhoneNumberModel $phoneNumberModel)
+    {
+        $this->phoneNumbers[] = $phoneNumberModel;
         return $this;
     }
 
