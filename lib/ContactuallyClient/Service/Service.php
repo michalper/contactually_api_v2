@@ -3,6 +3,7 @@
 namespace ContactuallyClient\Service;
 
 use GuzzleHttp\Client;
+use Tools\Tools;
 
 /**
  * Class Service
@@ -14,6 +15,7 @@ class Service
     const REQUEST_METHOD_POST = 'POST';
     const REQUEST_METHOD_PUT = 'PUT';
     const REQUEST_METHOD_DELETE = 'DELETE';
+    const REQUEST_METHOD_PATCH = 'PATCH';
 
     const URL = 'https://api.contactually.com/v2/';
 
@@ -25,7 +27,12 @@ class Service
     /**
      * @var array
      */
-    private $message = [];
+    private $postData = [];
+
+    /**
+     * @var array
+     */
+    private $getParams = [];
 
     /**
      * @var string
@@ -43,18 +50,36 @@ class Service
     /**
      * @return array
      */
-    public function getMessage()
+    public function getPostData()
     {
-        return $this->message;
+        return $this->postData;
     }
 
     /**
-     * @param array $message
+     * @param array $postData
      * @return Service
      */
-    public function setMessage(array $message)
+    public function setPostData(array $postData)
     {
-        $this->message = $message;
+        $this->postData = $postData;
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getGetParams()
+    {
+        return $this->getParams;
+    }
+
+    /**
+     * @param array $getParams
+     * @return Service
+     */
+    public function setGetParams($getParams)
+    {
+        $this->getParams = $getParams;
         return $this;
     }
 
@@ -101,19 +126,24 @@ class Service
      */
     public function request($url = false)
     {
+        $params = '';
+        if ($this->getParams) {
+            $params = '?' . http_build_query($this->getParams);
+        }
+
         if (!$url) {
             throw new \Exception('URL is missing.');
         }
 
         $request = $this->client->request(
             $this->requestMethod,
-            self::URL . $url,
+            self::URL . $url . $params,
             [
                 'headers' => [
                     'Accept' => 'application/json',
                     'Authorization' => 'Bearer ' . $this->apiKey
                 ],
-                'json' => $this->message
+                'json' => $this->postData
             ]
         );
 
