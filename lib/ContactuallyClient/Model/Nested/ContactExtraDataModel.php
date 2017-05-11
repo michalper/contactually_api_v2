@@ -3,10 +3,10 @@
 namespace ContactuallyClient\Model\Nested;
 
 /**
- * Class ExtraDataModel
+ * Class ContactExtraDataModel
  * @package ContactuallyClient\Model\Nested
  */
-class ExtraDataModel
+class ContactExtraDataModel
 {
     /**
      * @var string
@@ -98,7 +98,7 @@ class ExtraDataModel
 
     /**
      * @param string $lastContacted
-     * @return ExtraDataModel
+     * @return ContactExtraDataModel
      */
     public function setLastContacted($lastContacted)
     {
@@ -116,7 +116,7 @@ class ExtraDataModel
 
     /**
      * @param \DateTime $mutedAt
-     * @return ExtraDataModel
+     * @return ContactExtraDataModel
      */
     public function setMutedAt($mutedAt)
     {
@@ -134,7 +134,7 @@ class ExtraDataModel
 
     /**
      * @param string $relationshipStatus
-     * @return ExtraDataModel
+     * @return ContactExtraDataModel
      */
     public function setRelationshipStatus($relationshipStatus)
     {
@@ -152,7 +152,7 @@ class ExtraDataModel
 
     /**
      * @param \DateTime $teamLastContactedAt
-     * @return ExtraDataModel
+     * @return ContactExtraDataModel
      */
     public function setTeamLastContactedAt($teamLastContactedAt)
     {
@@ -170,7 +170,7 @@ class ExtraDataModel
 
     /**
      * @param string $teamLastContactedById
-     * @return ExtraDataModel
+     * @return ContactExtraDataModel
      */
     public function setTeamLastContactedById($teamLastContactedById)
     {
@@ -188,7 +188,7 @@ class ExtraDataModel
 
     /**
      * @param \DateTime $lastBucketedAt
-     * @return ExtraDataModel
+     * @return ContactExtraDataModel
      */
     public function setLastBucketedAt($lastBucketedAt)
     {
@@ -206,7 +206,7 @@ class ExtraDataModel
 
     /**
      * @param \DateTime $userLastContactedAt
-     * @return ExtraDataModel
+     * @return ContactExtraDataModel
      */
     public function setUserLastContactedAt($userLastContactedAt)
     {
@@ -224,7 +224,7 @@ class ExtraDataModel
 
     /**
      * @param BucketModel[] $buckets
-     * @return ExtraDataModel
+     * @return ContactExtraDataModel
      */
     public function setBuckets($buckets)
     {
@@ -242,7 +242,7 @@ class ExtraDataModel
 
     /**
      * @param array $sources
-     * @return ExtraDataModel
+     * @return ContactExtraDataModel
      */
     public function setSources($sources)
     {
@@ -251,7 +251,7 @@ class ExtraDataModel
     }
 
     /**
-     * @return array
+     * @return BucketModel
      */
     public function getFollowupSource()
     {
@@ -260,7 +260,7 @@ class ExtraDataModel
 
     /**
      * @param array $followupSource
-     * @return ExtraDataModel
+     * @return ContactExtraDataModel
      */
     public function setFollowupSource($followupSource)
     {
@@ -278,7 +278,7 @@ class ExtraDataModel
 
     /**
      * @param array $leadPools
-     * @return ExtraDataModel
+     * @return ContactExtraDataModel
      */
     public function setLeadPools($leadPools)
     {
@@ -296,7 +296,7 @@ class ExtraDataModel
 
     /**
      * @param string $teamLastContactedBy
-     * @return ExtraDataModel
+     * @return ContactExtraDataModel
      */
     public function setTeamLastContactedBy($teamLastContactedBy)
     {
@@ -314,7 +314,7 @@ class ExtraDataModel
 
     /**
      * @param AssociatedModel[] $associatedTags
-     * @return ExtraDataModel
+     * @return ContactExtraDataModel
      */
     public function setAssociatedTags($associatedTags)
     {
@@ -332,7 +332,7 @@ class ExtraDataModel
 
     /**
      * @param AssociatedModel $associatedCompany
-     * @return ExtraDataModel
+     * @return ContactExtraDataModel
      */
     public function setAssociatedCompany($associatedCompany)
     {
@@ -350,7 +350,7 @@ class ExtraDataModel
 
     /**
      * @param AssociatedModel $associatedLocation
-     * @return ExtraDataModel
+     * @return ContactExtraDataModel
      */
     public function setAssociatedLocation($associatedLocation)
     {
@@ -368,7 +368,7 @@ class ExtraDataModel
 
     /**
      * @param string $assignedTo
-     * @return ExtraDataModel
+     * @return ContactExtraDataModel
      */
     public function setAssignedTo($assignedTo)
     {

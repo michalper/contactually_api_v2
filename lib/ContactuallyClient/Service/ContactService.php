@@ -11,7 +11,7 @@ use Tools\Tools;
  * Class ContactService
  * @package ContactuallyClient\Service
  */
-class ContactService
+class ContactService implements InterfaceService
 {
     /**
      * @var Service

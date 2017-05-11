@@ -4,7 +4,7 @@ namespace ContactuallyClient\Model;
 
 use ContactuallyClient\Model\Nested\AddressModel;
 use ContactuallyClient\Model\Nested\EmailAddressModel;
-use ContactuallyClient\Model\Nested\ExtraDataModel;
+use ContactuallyClient\Model\Nested\ContactExtraDataModel;
 use ContactuallyClient\Model\Nested\PhoneNumberModel;
 use ContactuallyClient\Model\Nested\SocialMediaProfileModel;
 use ContactuallyClient\Model\Nested\WebsiteModel;
@@ -101,7 +101,7 @@ class ContactModel
     private $customFields;
 
     /**
-     * @var \ContactuallyClient\Model\Nested\ExtraDataModel
+     * @var \ContactuallyClient\Model\Nested\ContactExtraDataModel
      */
     private $extraData;
 
@@ -462,7 +462,7 @@ class ContactModel
     }
 
     /**
-     * @return ExtraDataModel
+     * @return ContactExtraDataModel
      */
     public function getExtraData()
     {
@@ -470,7 +470,7 @@ class ContactModel
     }
 
     /**
-     * @param ExtraDataModel $extraData
+     * @param ContactExtraDataModel $extraData
      * @return ContactModel
      */
     public function setExtraData($extraData)
