@@ -26,12 +26,12 @@ class AddressModel
     /**
      * @var string
      */
-    private $street1;
+    private $street_1;
 
     /**
      * @var string
      */
-    private $street2;
+    private $street_2;
 
     /**
      * @var string
@@ -112,16 +112,16 @@ class AddressModel
      */
     public function getStreet1()
     {
-        return $this->street1;
+        return $this->street_1;
     }
 
     /**
-     * @param string $street1
+     * @param string $street_1
      * @return AddressModel
      */
-    public function setStreet1($street1)
+    public function setStreet1($street_1)
     {
-        $this->street1 = $street1;
+        $this->street_1 = $street_1;
         return $this;
     }
 
@@ -130,16 +130,16 @@ class AddressModel
      */
     public function getStreet2()
     {
-        return $this->street2;
+        return $this->street_2;
     }
 
     /**
-     * @param string $street2
+     * @param string $street_2
      * @return AddressModel
      */
-    public function setStreet2($street2)
+    public function setStreet2($street_2)
     {
-        $this->street2 = $street2;
+        $this->street_2 = $street_2;
         return $this;
     }
 
